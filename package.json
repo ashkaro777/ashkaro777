@@ -7,10 +7,6 @@
   "scripts": {
     "build": "cd src && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NaveenDA/naveenda.github.io.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
