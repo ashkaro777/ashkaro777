@@ -1,0 +1,19 @@
+{
+  "name": "ash-portfolio",
+  "private": true,  
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd src && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NaveenDA/naveenda.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://ashkaro777.github.io/react-gh-pages",
+  "dependencies": {}
+}
