@@ -1,11 +1,15 @@
 {
   "name": "ash-portfolio",
   "private": true,
+  "homepage": "https://ashkaro777.github.io/react-gh-pages",
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "lodash": "^4.17.21",
@@ -21,6 +25,7 @@
     "@types/styled-components": "^5.1.22",
     "eslint": "8.9.0",
     "eslint-config-next": "12.0.10",
+    "gh-pages": "^4.0.0",
     "typescript": "4.5.5"
   }
 }
