@@ -1,11 +1,10 @@
 import React, { useCallback } from "react";
-import styled from "styled-components";
-import Image from "next/image";
+import styled from "styled-components"; 
 
 import { squareSizing } from "common/utils/responsive/sizingUtils";
 import { screenSmallerThan } from "common/utils/responsive";
 
-const StyledImage = styled(Image)`
+const StyledImage = styled.img`
   ${squareSizing("26px", "--icon-size")}
   border-radius: inherit;
 `;
