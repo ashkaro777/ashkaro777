@@ -2,14 +2,14 @@
   "name": "ash-portfolio",
   "private": true,
   "homepage": "https://ashkaro777.github.io/react-gh-pages",
-
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev", 
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "postbuild": "cp -a out/. ../build && touch ../build/.nojekyll"
   },
   "dependencies": {
     "lodash": "^4.17.21",
