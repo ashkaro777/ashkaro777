@@ -26,7 +26,7 @@ jobs:
           cache: 'npm'
       - run: npm install
       - run: npm run build
-        with:
+        env:
             CI: true
 
       - name: Deploy 🚀
@@ -34,5 +34,5 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: src/out
+          FOLDER: ./src/out
           CLEAN: true
