@@ -3,6 +3,8 @@ import "../styles/bootstrap.min.css";
 import "../styles/color.css";
 import "../styles/globals.css";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import type { AppProps } from "next/app";
 import AppLayout from "common/components/AppLayout";
 
