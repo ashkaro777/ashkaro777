@@ -1,15 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 
-import Button from "common/components/common/Button";
-
-const StyledButtonsContainer = styled.div`
-  display: flex;
-  gap: 2rem;
-`;
+import BookSocialButtons from "../BookSocialButtons";
 
 const StyledParagraph = styled.p`
   max-width: 65ch;
+`;
+
+const StyledSecondaryParagraph = styled.p`
+  max-width: 65ch;
+  font-size: 20px;
+`;
+
+const StyledReadButton = styled.button`
+  background: #0255fd;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 1rem;
+  border-radius: 100rem;
 `;
 
 const BookDetails: React.FC = () => {
@@ -18,24 +27,26 @@ const BookDetails: React.FC = () => {
       <h2>Where you belong</h2>
 
       <StyledParagraph>
-        When Life choose you for something, even the wrong path leads you to the
+        When like chooses you for something even the wrong path leads you to
         right destination
       </StyledParagraph>
 
-      <StyledParagraph>
-        A story about dreams, responsibilities, love and friendship.
+      <StyledParagraph className="mb-0">
+        A story about dreams respnsibilities, love and friendship
       </StyledParagraph>
 
-      <StyledParagraph>
+      <hr />
+
+      <StyledSecondaryParagraph>
         Earnings from the book sales goes to charity. Buy the book and support
         for a good cause.
-      </StyledParagraph>
+      </StyledSecondaryParagraph>
 
-      <StyledButtonsContainer className="mt-5">
-        <Button>Amazon</Button>
-        <Button>Flipkart</Button>
-        <Button>Pothi</Button>
-      </StyledButtonsContainer>
+      <BookSocialButtons className="mt-5 d-none d-md-flex" />
+
+      <div className="d-flex justify-content-center mt-5">
+        <StyledReadButton>Read pdf</StyledReadButton>
+      </div>
     </div>
   );
 };
