@@ -1,5 +1,6 @@
 import React, { useCallback } from "react";
-import styled from "styled-components"; 
+import styled from "styled-components";
+import lodashGet from "lodash/get";
 
 import { squareSizing } from "common/utils/responsive/sizingUtils";
 import { screenSmallerThan } from "common/utils/responsive";
@@ -73,7 +74,7 @@ const NavItem: React.FunctionComponent<{
       onClick={handleClick}
       href={`#${id}`}
     >
-      <StyledImage src={icon} alt={label} />
+      <StyledImage src={lodashGet(icon, "src", icon)} alt={label} />
     </StyledNavItem>
   );
 };
