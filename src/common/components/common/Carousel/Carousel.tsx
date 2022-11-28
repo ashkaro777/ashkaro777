@@ -17,7 +17,7 @@ const StyledPaginationButton = styled.button<{ $isActive?: boolean }>`
   background: none;
   outline: none;
 
-  ${squareSizing()}
+  ${squareSizing("24px")}
 `;
 
 const StyledPagination = styled.div`
