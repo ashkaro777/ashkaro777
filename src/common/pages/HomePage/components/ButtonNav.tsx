@@ -46,16 +46,16 @@ const ButtonNav: React.FunctionComponent = () => {
         label: "Book",
         icon,
       },
-      {
-        id: ELEMENT_ID.TRAVEL_SECTION,
-        label: "Travel",
-        icon,
-      },
-      {
-        id: ELEMENT_ID.PHOTOGRAPHY_SECTION,
-        label: "Photography",
-        icon,
-      },
+      // {
+      //   id: ELEMENT_ID.TRAVEL_SECTION,
+      //   label: "Travel",
+      //   icon,
+      // },
+      // {
+      //   id: ELEMENT_ID.PHOTOGRAPHY_SECTION,
+      //   label: "Photography",
+      //   icon,
+      // },
     ];
   }, []);
 
@@ -70,7 +70,7 @@ const ButtonNav: React.FunctionComponent = () => {
       (entries) => {
         entries.forEach((entry) => {
           const activeItemId = entry.target.id;
-          if (entry.intersectionRatio > 0.3 && activeItemId)
+          if (entry.intersectionRatio > 0.5 && activeItemId)
             setActiveItemIdDebounced(activeItemId);
         });
       },
