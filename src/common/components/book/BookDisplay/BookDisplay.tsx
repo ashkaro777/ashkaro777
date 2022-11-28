@@ -1,30 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import Book3dDisplay from "../Book3dDisplay";
 
-const StyledBook = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+import imgBookFront from "public/assets/images/book/cover.jpg";
+import imgBookSide from "public/assets/images/book/side.jpg";
+import imgBookBack from "public/assets/images/book/back.jpg";
 
-  width: 18vw;
-  max-width: 100%;
-  height: 24vw;
-  max-height: 60vh;
-  border: 1px solid #fff;
-  border-radius: 3px;
-`;
+const StyledBook = styled(Book3dDisplay)`
+  &:hover {
+    --rotate-angle: 35deg;
+    box-shadow: 0ppx 20px 20px rgba(0, 0, 0, 0.2);
+  }
 
-const StyledContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  &:active {
+    --rotate-angle: 180deg;
+    box-shadow: 0ppx 20px 20px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 const BookDisplay: React.FC = () => {
   return (
-    <StyledContainer>
-      <StyledBook>Book</StyledBook>
-    </StyledContainer>
+    <StyledBook
+      width="304px"
+      height="434px"
+      bookFrontImage={imgBookFront.src}
+      bookSideImage={imgBookSide.src}
+      bookBackImage={imgBookBack.src}
+    />
   );
 };
 
