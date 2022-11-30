@@ -18,7 +18,7 @@ const StypedBackgroundVideo = styled.video`
 const HeroSection: React.FunctionComponent<IHeroSectionProps> = () => {
   return (
     <StyledHeroSection id={ELEMENT_ID.HERO_SECTION}>
-      <StyledHeading>Ashish Jahangid</StyledHeading>
+      <StyledHeading>Ashish Jangid</StyledHeading>
       <StypedBackgroundVideo
         src={"./assets/videos/dance-grains.mp4"}
         autoPlay
