@@ -14,6 +14,7 @@ const HomePage: React.FunctionComponent = () => {
       <HeroSection />
       <BookDetailsSection />
       <PhotographySection />
+      
       {false && <TravelSection />}
     </StyledHomePage>
   );
