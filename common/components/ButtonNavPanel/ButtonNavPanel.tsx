@@ -25,8 +25,9 @@ const ButtonNavPanel: React.FunctionComponent<{
   items: {
     id: string;
     label: string;
-    icon: string;
+    icon?: string;
     color?: string;
+    iconString?: string;
   }[];
   activeItemId?: string;
   onChange?: (id: string) => void;
@@ -56,7 +57,7 @@ const ButtonNavPanel: React.FunctionComponent<{
   return (
     <StyledContainer className={className}>
       {items.map((item, i) => {
-        const { id, icon, label, color } = item;
+        const { id, icon, label, color, iconString } = item;
         return (
           <NavItem
             key={`${id}_${i}`}
@@ -66,6 +67,7 @@ const ButtonNavPanel: React.FunctionComponent<{
             isActive={activeItemId_ === id}
             onClick={handleItemClick}
             color={color}
+            iconString={iconString}
           />
         );
       })}

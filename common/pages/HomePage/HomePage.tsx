@@ -13,8 +13,8 @@ const HomePage: React.FunctionComponent = () => {
       <ButtonNav />
       <HeroSection />
       <BookDetailsSection />
+      <PhotographySection />
       {false && <TravelSection />}
-      {false && <PhotographySection />}
     </StyledHomePage>
   );
 };

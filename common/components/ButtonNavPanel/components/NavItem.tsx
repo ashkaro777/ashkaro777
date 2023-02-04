@@ -11,8 +11,8 @@ const StyledImage = styled.img`
 `;
 
 const StyledNavItem = styled.a<{ $isActive?: boolean; $color?: string }>`
-  --active-size: 80px;
-  ${squareSizing("18px")}
+  --active-size: 48px;
+  ${squareSizing("16px")}
 
   display: inline-flex;
   align-items: center;
@@ -22,6 +22,7 @@ const StyledNavItem = styled.a<{ $isActive?: boolean; $color?: string }>`
   border-radius: 777rem;
   cursor: pointer;
   border: 2px solid #fff;
+  text-decoration: none;
 
   ${screenSmallerThan.tablet} {
     --active-size: 48px;
@@ -56,12 +57,13 @@ const StyledNavItem = styled.a<{ $isActive?: boolean; $color?: string }>`
 const NavItem: React.FunctionComponent<{
   id: string;
   label: string;
-  icon: string;
+  icon?: string;
+  iconString?: string;
   color?: string;
   className?: string;
   isActive?: boolean;
   onClick?: (id: string) => void;
-}> = ({ className, label, onClick, icon, id, isActive, color }) => {
+}> = ({ className, label, onClick, icon, iconString, id, isActive, color }) => {
   const handleClick = useCallback(() => {
     if (onClick) onClick(id);
   }, [onClick, id]);
@@ -74,7 +76,11 @@ const NavItem: React.FunctionComponent<{
       onClick={handleClick}
       href={`#${id}`}
     >
-      <StyledImage src={lodashGet(icon, "src", icon)} alt={label} />
+      {iconString ? (
+        <i className={iconString} />
+      ) : (
+        <StyledImage src={lodashGet(icon, "src", icon)} alt={label} />
+      )}
     </StyledNavItem>
   );
 };
