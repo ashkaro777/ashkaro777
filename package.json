@@ -4,12 +4,11 @@
   "homepage": "https://ashkaro777.github.io/react-gh-pages",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "postbuild": "cp -a out/. ../build && touch ../build/.nojekyll"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@react-aria/button": "^3.6.0",
