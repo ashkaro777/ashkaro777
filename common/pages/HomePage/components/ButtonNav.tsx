@@ -19,9 +19,15 @@ const StyledButtonNav = styled(ButtonNavPanel)`
   bottom: 3rem;
   right: 3rem;
   z-index: 100;
+  opacity: 0.25;
+  transition: opacity 240ms ease;
 
   ${screenSmallerThan.tablet} {
     right: 0;
+  }
+
+  &:hover {
+    opacity: 1;
   }
 `;
 
@@ -40,22 +46,25 @@ const ButtonNav: React.FunctionComponent = () => {
         id: ELEMENT_ID.HERO_SECTION,
         label: "Hero",
         icon,
+        iconString: "las la-home",
       },
       {
         id: ELEMENT_ID.BOOK_SECTION,
         label: "Book",
         icon,
+        iconString: "las la-book-open",
       },
       // {
       //   id: ELEMENT_ID.TRAVEL_SECTION,
       //   label: "Travel",
       //   icon,
       // },
-      // {
-      //   id: ELEMENT_ID.PHOTOGRAPHY_SECTION,
-      //   label: "Photography",
-      //   icon,
-      // },
+      {
+        id: ELEMENT_ID.PHOTOGRAPHY_SECTION,
+        label: "Photography",
+        icon,
+        iconString: "las la-camera-retro",
+      },
     ];
   }, []);
 

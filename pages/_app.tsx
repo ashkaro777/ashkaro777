@@ -2,6 +2,7 @@ import "../styles/reset.css";
 import "../styles/bootstrap.min.css";
 import "../styles/color.css";
 import "../styles/globals.css";
+import "../styles/animations.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
